@@ -4,7 +4,6 @@ import React from 'react';
 const RightSidebar = () => {
   return (
     <Box
-      bgcolor="lightcoral"
       flex={2}
       p={2}
       sx={{
@@ -14,7 +13,7 @@ const RightSidebar = () => {
         },
       }}
     >
-      RightSidebar
+      <Box position="fixed">RightSidebar</Box>
     </Box>
   );
 };
