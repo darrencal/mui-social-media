@@ -7,7 +7,7 @@ import RightSidebar from './components/RightSidebar';
 import Sidebar from './components/Sidebar';
 
 function App() {
-  const [mode, setMode] = useState('dark');
+  const [mode, setMode] = useState('light');
 
   const darkTheme = createTheme({
     palette: {
@@ -17,7 +17,11 @@ function App() {
 
   return (
     <ThemeProvider theme={darkTheme}>
-      <Box bgcolor={'background.default'} color={'text.primary'}>
+      <Box
+        bgcolor={'background.default'}
+        color={'text.primary'}
+        sx={{ minHeight: '100vh' }}
+      >
         <Navbar />
         <Stack direction="row" spacing={2} justifyContent="space-between">
           <Sidebar mode={mode} setMode={setMode} />
