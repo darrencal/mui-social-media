@@ -19,7 +19,7 @@ import {
   Switch,
 } from '@mui/material';
 
-const Sidebar = () => {
+const Sidebar = ({ mode, setMode }) => {
   return (
     <Box
       flex={1}
@@ -94,7 +94,9 @@ const Sidebar = () => {
               <ListItemIcon>
                 <DarkMode />
               </ListItemIcon>
-              <Switch />
+              <Switch
+                onChange={() => setMode(mode === 'light' ? 'dark' : 'light')}
+              />
             </ListItemButton>
           </ListItem>
         </List>
